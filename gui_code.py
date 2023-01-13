@@ -68,8 +68,8 @@ layout2=[
 
     [sg.Text("Anual Property Tax (%)"), sg.InputText(default_text = .005,key = "prop_tax_perc_ltr", size = (10,5)),sg.Text("Capex Budget Allocation of Monthly Rents (%)"), sg.InputText(default_text =.05,key = "capex_ltr", size = (10,5)),
     sg.Text("Repair Budget Allocation of Monthly Rents (%)"), sg.InputText(default_text =.05,key = "repair_ltr", size = (10,5))],
-    [sg.Text("Utilities"), sg.InputText(default_text =0,key = "util_ltr", size = (10,5)),sg.Text("Home Owners Association"), sg.InputText(default_text = 0,key = "hoa_ltr", size = (10,5)),
-    sg.Text("Home Owners Insurance"), sg.InputText(default_text = 200,key = "hoi_ltr", size = (10,5))],
+    [sg.Text("Utilities"), sg.InputText(default_text =0, key = "util_ltr", size = (10,5)),sg.Text("Home Owners Association"), sg.InputText(default_text = 0,key = "hoa_ltr", size = (10,5)),
+    sg.Text("Home Owners Insurance"), sg.InputText(default_text = 200, key = "hoi_ltr", size = (10,5))],
     [sg.Text("Private Morgage Insurance (%)"), sg.InputText(default_text = 0,key = "pmi_ltr", size = (10,5)),sg.Text("Property Management Fee (%)"), sg.InputText(default_text = .10,key = "prop_man_ltr", size = (10,5))],
     
     [sg.HSeparator(pad=(1,10))],
@@ -105,13 +105,12 @@ tabgrp = [[sg.TabGroup([[
                        selected_background_color='Green', border_width=5), sg.Button('Close')]] 
 
 
-window = sg.Window("Mountain Cat Lodging Calculator", tabgrp)
+window = sg.Window("Real Estate Deal Analysis Calculator", tabgrp)
 
 while True:
     event,values = window.read()
 
     if event == "analyze_airbnb":
-
 
         purchase_price = float(values["purchase_price_abb"])
         dp = float(values["dp_perc_abb"])
